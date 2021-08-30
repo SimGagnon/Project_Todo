@@ -27,8 +27,12 @@ function addTodo(e) {
 
 
 
+    const toDoDelete = document.createElement("button");
+    toDoDelete.classList.add("todo__button--delete");
+    toDoDelete.addEventListener("click", deleteCheck);
+    toDoDelete.innerHTML = '<ion-icon name="trash-outline"></ion-icon>';
+    toDo.appendChild(toDoDelete);
 
-    /* toDoDelete.innerHTML = '<ion-icon name="trash-outline"></ion-icon>'; */
 }
 
 
