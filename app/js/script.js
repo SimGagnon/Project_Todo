@@ -22,20 +22,23 @@ function addTodo(e) {
     toDoText.innerHTML = todoInput.value;
     toDo.appendChild(toDoText);
 
-    listParent.appendChild(toDo);
-
-
-
-
     const toDoDelete = document.createElement("button");
     toDoDelete.classList.add("todo__button--delete");
     toDoDelete.addEventListener("click", deleteCheck);
     toDoDelete.innerHTML = '<ion-icon name="trash-outline"></ion-icon>';
     toDo.appendChild(toDoDelete);
 
+
+    todoInput.value = "";
+    listParent.appendChild(toDo);
 }
 
 
-function deleteCheck() {
-    console.log("delete");
+function deleteCheck(e) {
+    const item = e.target
+    //Delete todo 
+    item.classList[0] === 'todo__button--delete' ? item.parentNode.remove() : null ;
+
+    // Check todo
+    item.classList[0] === 'todo__button--check' ? item.parentNode.classList.toggle('completed') : null;
 }
