@@ -1,5 +1,5 @@
-const addButton = document.querySelector(".todo__input button");
-const todoInput = document.querySelector(".todo__input input");
+const addButton = document.querySelector(".todo__form button");
+const todoInput = document.querySelector(".todo__form input");
 const form = document.querySelector("form");
 const listParent = document.querySelector(".todo__list")
 

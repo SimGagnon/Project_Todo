@@ -16,13 +16,13 @@ function scssTask() {
     .pipe(dest('app/css/', { sourcemaps: '.'}));
 }
 
-// Javascript Task
+/* // Javascript Task
 
 function jsTask() {
     return src('app/js/*.js', {sourcemaps: true})
     .pipe(terser())
     .pipe(dest('app/js/',{ sourcemaps: '.'}))
-}
+} */
 
 // Browsersync
 function browserSyncServer(cb) {
@@ -48,11 +48,11 @@ function browserSyncReload(cb) {
 function watchTask() {
     watch('*.html', browserSyncReload);
     watch(['app/scss/**/*.scss', 'app/js/**/*.js'],
-    series(scssTask, jsTask, browserSyncReload));
+    series(scssTask, browserSyncReload));
 }
 
 // Default Gulp Task
-exports.default = series(scssTask, jsTask, browserSyncServer, watchTask);
+exports.default = series(scssTask,  browserSyncServer, watchTask);
 
 // npm install @babel/core @babel/preset-env postcss autoprefixer browser-sync cssnano dart-sass gulp gulp-babel 
 // gulp-postcss gulp-sass gulp-terser

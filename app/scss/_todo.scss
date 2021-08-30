@@ -1,0 +1,55 @@
+.todo {
+
+    &__form {
+        margin-bottom: 20px;
+
+        input {
+            box-shadow: 0px 4px 4px rgba(0,0,0,0.21);
+            border-radius: 5px;
+            background: white;
+            border-color: transparent;
+            width: 80%;
+            padding: 0.9375rem 0rem 0.9375rem 1.1875rem;
+            outline: none;
+
+            &:focus {
+                border: 2px $LightBlue solid;
+            }
+
+            &::placeholder {
+                opacity: 0.5;
+                font-style: italic;
+            }
+        }
+    }
+
+    &__item {
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.21);
+        background: white;
+        border: none;
+        padding: 0.9375rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            margin-left: 3rem;
+        }
+    }
+
+    &__button {
+
+        &--check {
+            position: absolute;
+        }
+
+        &--delete {
+            background: $DeepPink;
+            color: white;
+            font-weight: bold;
+            border-radius: 3px;
+            padding: 0.25rem 0.4375rem;
+        }
+    }
+}
