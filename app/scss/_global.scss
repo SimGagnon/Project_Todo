@@ -18,6 +18,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: $Josefin;
+    max-width: 43.75rem;
+    margin: auto;
 }
 
 li {
@@ -32,6 +34,11 @@ button, input[type='checkbox'] {
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+.selected {
+    border-bottom: 2px $DeepPink solid;
+    margin-bottom: -2px;
 }
 
 
