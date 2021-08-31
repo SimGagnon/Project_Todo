@@ -27,8 +27,8 @@ function addTodo(e) {
 
     const toDoDelete = document.createElement("button");
     toDoDelete.classList.add("todo__button--delete");
-    toDoDelete.addEventListener("click", deleteCheck);
     toDoDelete.innerHTML = '<ion-icon name="trash-outline"></ion-icon>';
+    toDoDelete.addEventListener("click", deleteCheck);
     toDo.appendChild(toDoDelete);
 
     todoInput.value = "";
@@ -37,6 +37,7 @@ function addTodo(e) {
 
 
 function deleteCheck(e) {
+    e.stopPropagation();
     const item = e.target
     //Delete todo 
  /*    item.classList[0] === 'todo__button--delete' ? item.parentNode.remove() : null ; */
