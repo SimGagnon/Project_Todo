@@ -20,6 +20,7 @@ body {
     font-family: $Josefin;
     max-width: 43.75rem;
     margin: auto;
+    padding: 3rem 1.5625rem;
 }
 
 li {
@@ -39,6 +40,11 @@ button, input[type='checkbox'] {
 .selected {
     border-bottom: 2px $DeepPink solid;
     margin-bottom: -2px;
+}
+
+.slideout {
+    transform: translateX(10rem);
+    opacity: 0;
 }
 
 
